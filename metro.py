@@ -151,7 +151,7 @@ def main():
     metroGraph = readGraph()
     #drawGraph(metroGraph)
     #shortest path between Créteil Préfecture – Gare du Nord
-    chemin = nx.bidirectional_dijkstra(metroGraph, 119, 161)
+    chemin = dijkstra(metroGraph, 119, 161)
     stations = [metroGraph.nodes[k]['name'] for k in chemin[1]]
     print(chemin[0])
     print(stations)
